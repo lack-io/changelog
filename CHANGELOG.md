@@ -1,21 +1,13 @@
-# 1.2.0 (2022/01/27)
-
-### Bug Fixes
-- fixing no git error details issue
-
-# 1.1.0 (2022/01/17)
-
-### Features
-
-- separate features and bug fixes disable fetch by deafult
+# list (2023/02/24)
 
 ### Bug Fixes
 
-- fixing first tag not have commit logs issue
+- [b527c52a](https://github.com/lack-io/changelog/commit/b527c52acb288d012b389faf10f15d91f5f3a35d) fixing no git error details issue
+- [4a3a9655](https://github.com/lack-io/changelog/commit/4a3a9655ce7d3dbabf08745d0ff85b64af6464e1) [feat] separate features and bug fixes disable fetch by deafult
+- [6faad830](https://github.com/lack-io/changelog/commit/6faad830788c91222504f5b034aa7ca3b21a8685) fixing first tag not have commit logs issue
 
-# 1.0.0 (2022/01/14)
+### Others
 
-### Features
-
-- support create changelog.md from git repository
-- Initial commit
+- [b527c52a](https://github.com/lack-io/changelog/commit/b527c52acb288d012b389faf10f15d91f5f3a35d) fixing no git error details issue
+- [4a3a9655](https://github.com/lack-io/changelog/commit/4a3a9655ce7d3dbabf08745d0ff85b64af6464e1) [feat] separate features and bug fixes disable fetch by deafult
+- [6faad830](https://github.com/lack-io/changelog/commit/6faad830788c91222504f5b034aa7ca3b21a8685) fixing first tag not have commit logs issue
