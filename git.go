@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"fmt"
 	"os/exec"
+	"strings"
 )
 
 func git(dir string, args ...string) (string, error) {
@@ -55,4 +56,25 @@ func getGitLogs(tag1, tag2 string) (string, error) {
 		return "", err
 	}
 	return commits, nil
+}
+
+// getGitRemote will query remote url
+func getGitRemote() (string, error) {
+	items, err := git(*source, "remote", "-v")
+	if err != nil {
+		return "", err
+	}
+
+	remotes := strings.Split(items, "\n")
+	var remote string
+	for _, item := range remotes {
+		if strings.Contains(item, "push") {
+			parts := strings.Split(strings.TrimSpace(strings.TrimPrefix(item, "origin")), " ")
+			if len(parts) > 0 {
+				remote = parts[0]
+			}
+		}
+	}
+
+	return remote, nil
 }

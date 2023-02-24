@@ -5,7 +5,7 @@ A tool help generate CHANGELOG.md from git.
 ## Installation
 
 ```
-go install github.com/xpunch/changelog
+go install github.com/lack-io/changelog
 ```
 
 ## Usage
@@ -13,13 +13,19 @@ go install github.com/xpunch/changelog
 ### under target git repository
 
 ```
-changelog
+changelog --output CHANGELOG.md
 ```
 
 ### print logs
 
 ```
 changelog --verbose
+```
+
+### print last logs
+
+```
+changelog --verbose --last
 ```
 
 ### fetch latest repository

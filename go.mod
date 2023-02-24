@@ -1,4 +1,4 @@
-module github.com/xpunch/changelog
+module github.com/lack-io/changelog
 
 go 1.17
 
