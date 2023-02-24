@@ -103,7 +103,7 @@ func main() {
 			} else if strings.Contains(msg, "fix") {
 				records[i].BugFixes = append(records[i].BugFixes, genHash(strings.TrimSpace(strings.TrimPrefix(msg, "fix")), hash))
 			} else if strings.HasPrefix(msg, "feat") {
-				records[i].Features = append(records[i].Features, genHash(strings.TrimSpace(strings.TrimPrefix(msg, "[feat]")), hash))
+				records[i].Features = append(records[i].Features, genHash(strings.TrimSpace(strings.TrimPrefix(msg, "feat")), hash))
 			} else if strings.HasPrefix(msg, "[feat]") {
 				records[i].Features = append(records[i].Features, genHash(strings.TrimSpace(strings.TrimPrefix(msg, "[feat]")), hash))
 			} else if strings.HasPrefix(msg, "[feature]") {
