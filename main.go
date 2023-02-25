@@ -140,7 +140,7 @@ func main() {
 		}
 		if len(r.Others) > 0 {
 			buf.WriteString("\n### Others\n\n")
-			for _, c := range r.BugFixes {
+			for _, c := range r.Others {
 				if len(c) > 0 {
 					buf.WriteString(fmt.Sprintf("- %s\n", c))
 				}
