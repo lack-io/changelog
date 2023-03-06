@@ -4,7 +4,6 @@ import (
 	"bytes"
 	"flag"
 	"fmt"
-	"io/ioutil"
 	"os"
 	"sort"
 	"strings"
@@ -156,7 +155,7 @@ func main() {
 		return
 	}
 
-	if err := ioutil.WriteFile(*output, buf.Bytes(), os.ModePerm); err != nil {
+	if err := os.WriteFile(*output, buf.Bytes(), os.ModePerm); err != nil {
 		fmt.Println(err)
 		return
 	}
