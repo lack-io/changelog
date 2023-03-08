@@ -15,7 +15,7 @@ if [ "$gopath" == "" ];then
   gopath=`go env var GOROOT | grep "/"`
 fi
 
-package=`curl -s https://api.github.com/repos/vine-io/${name}/releases/latest | grep browser_download_url | grep ${os} | cut -d'"' -f4 | grep "${name}-${os}-${archi}"`
+package=`curl -s https://api.github.com/repos/lack-io/${name}/releases/latest | grep browser_download_url | grep ${os} | cut -d'"' -f4 | grep "${name}-${os}-${archi}"`
 
 echo "install package: ${package}"
 wget ${package} -O $gopath/bin/changelog
