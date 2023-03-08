@@ -4,7 +4,7 @@ GIT_TAG=$(shell git describe --abbrev=0 --tags --always --match "v*")
 CGO_ENABLED=0
 BUILD_DATE=$(shell date +%s)
 
-all: tar
+all: build-linux-amd64
 
 vendor:
 	go mod vendor
