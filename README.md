@@ -5,7 +5,7 @@ A tool help generate CHANGELOG.md from git.
 ## Installation
 
 ```
-go install github.com/lack-io/changelog
+bash -c "$(curl -fsSL https://raw.github.com/lack-io/changlog/master/install.sh)"
 ```
 
 ## Usage
