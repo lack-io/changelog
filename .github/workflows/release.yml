@@ -54,6 +54,6 @@ jobs:
             ./_output/changelog-darwin-amd64-${{ github.ref_name }}
             ./_output/changelog-linux-amd64-${{ github.ref_name }}
             ./_output/changelog-linux-arm64-${{ github.ref_name }}
-            ./_output/changelog-windows-amd64-${{ github.ref_name }}.exec
+            ./_output/changelog-windows-amd64-${{ github.ref_name }}.exe
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
