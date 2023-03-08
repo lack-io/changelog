@@ -37,8 +37,8 @@ jobs:
           echo "tag=${{ github.ref_name }}" >> $GITHUB_ENV
           echo "tag=${{ github.ref_name }}"
 
-      - name: Build Tar
-        run: make tar
+      - name: Release
+        run: make release
 
       - name: Release
         uses: softprops/action-gh-release@v1
@@ -50,11 +50,10 @@ jobs:
           draft: false
           prerelease: false
           files: |
-            ./_output/CHANGELOG.md
-            ./_output/vine-darwin-arm64-${{ github.ref_name }}.tar.gz
-            ./_output/vine-darwin-amd64-${{ github.ref_name }}.tar.gz
-            ./_output/vine-linux-amd64-${{ github.ref_name }}.tar.gz
-            ./_output/vine-linux-arm64-${{ github.ref_name }}.tar.gz
-            ./_output/vine-windows-amd64-${{ github.ref_name }}.zip
+            ./_output/changelog-darwin-arm64-${{ github.ref_name }}
+            ./_output/changelog-darwin-amd64-${{ github.ref_name }}
+            ./_output/changelog-linux-amd64-${{ github.ref_name }}
+            ./_output/changelog-linux-arm64-${{ github.ref_name }}
+            ./_output/changelog-windows-amd64-${{ github.ref_name }}.exec
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
