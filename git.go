@@ -3,6 +3,7 @@ package main
 import (
 	"bytes"
 	"fmt"
+	"os"
 	"os/exec"
 	"strings"
 )
@@ -14,6 +15,7 @@ func git(dir string, args ...string) (string, error) {
 	cmd.Stdout = &stdout
 	cmd.Stderr = &stderr
 	cmd.Dir = dir
+	cmd.Env = os.Environ()
 	if *verbose {
 		fmt.Println(cmd.String())
 	}
